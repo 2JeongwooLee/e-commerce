@@ -8,7 +8,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 
 public class Aes256Util {
-    public static String alg = "AES/CBC/PKC55Padding";
+    public static String alg = "AES/CBC/PKCS5Padding";
     private static final String KEY = "ZEROBASEKEYISZEROBASEKEY";
     private static final String IV = KEY.substring(0,16);
 
