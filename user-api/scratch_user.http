@@ -41,5 +41,25 @@ X-AUTH-TOKEN:
 ########################
 
 ### 회원가입 (셀러)
+POST  http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1998-01-14",
+  "email": "wjddn3751@gmail.com",
+  "name": "myName",
+  "password": "pw",
+  "phone": "01012345678"
+}
+
+### 이메일 인증(고객)
+GET  http://localhost:8081/signUp/seller/verify?email=wjddn3751@gmail.com&code=
 
 ### 로그인 (셀러)
+POST  http://localhost:8081/signin/seler
+Content-Type: application/json
+
+{
+  "email": "wjddn3751@gmail.com",
+  "password": "pw"
+}
