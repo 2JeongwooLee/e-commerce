@@ -1,7 +1,6 @@
 package com.zerobase.cms.order.domain.product;
 
 import com.zerobase.cms.order.domain.model.Product;
-import com.zerobase.cms.order.domain.model.ProductItem;
 import lombok.*;
 
 import java.util.List;
@@ -27,6 +26,15 @@ public class ProductDto {
                 .name(product.getName())
                 .description(product.getDescription())
                 .items(items)
+                .build();
+    }
+
+    public static ProductDto withoutItemsfrom(Product product) {
+
+        return ProductDto.builder()
+                .id(product.getId())
+                .name(product.getName())
+                .description(product.getDescription())
                 .build();
     }
 }
