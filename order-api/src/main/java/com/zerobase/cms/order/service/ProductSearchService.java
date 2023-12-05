@@ -23,8 +23,8 @@ public class ProductSearchService {
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_PRODUCT));
     }
 
-    public List<Product> getListbyProductIds(List<Long> productIds) {
-        return productRepository.findAllById(productIds);
+    public List<Product> getListByProductIds(List<Long> productIds) {
+        return productRepository.findAllByIdIn(productIds);
     }
 
 

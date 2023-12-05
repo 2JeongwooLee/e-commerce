@@ -41,7 +41,7 @@ public class RedisClient {
         put(key.toString(), cart);
     }
 
-    public void put(String key, Cart cart) {
+    private void put(String key, Cart cart) {
         try {
             redisTemplate.opsForValue().set(key, mapper.writeValueAsString(cart));
         } catch (JsonProcessingException e) {
